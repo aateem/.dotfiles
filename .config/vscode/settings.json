@@ -1,0 +1,29 @@
+{
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "python.languageServer": "Pylance",
+    "python.formatting.provider": "black",
+    "explorer.confirmDelete": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.fontFamily": "Iosevka",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "normal",
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Solarized Light",
+    "git.autofetch": true,
+    "redhat.telemetry.enabled": false,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "vscode-kubernetes.helm-path.mac": "/usr/local/bin/helm",
+    "vscode-kubernetes.kubectl-path.mac": "/usr/local/bin/kubectl",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "opa.path": "/Users/artem.roma/opa",
+}
+
