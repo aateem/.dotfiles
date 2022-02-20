@@ -13,7 +13,7 @@ vim.cmd('colorscheme nightfox')
 -- vim.cmd([[ autocmd ColorScheme * :lua require('vim.lsp.diagnostic')._define_default_signs_and_highlights() ]])
 
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
     ensure_installed = { 'python', 'lua' },
     sync_install = true,
     highlight = {

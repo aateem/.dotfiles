@@ -1,9 +1,3 @@
-# Base16 Shell
-BASE16_SHELL="$HOME/sandbox/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 autoload -Uz promptinit
 promptinit
 autoload -U colors
@@ -34,7 +28,8 @@ alias myip='curl ifconfig.co/ip'
 
 setopt PROMPT_SUBST
 
-setopt APPEND_HISTORY
+# share history among all zsh sessions, ignoring duplicates
+setopt append_history share_history histignorealldups
 
 precmd () { vcs_info }
 
