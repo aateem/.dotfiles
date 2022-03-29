@@ -49,8 +49,18 @@ function push_to_branch {
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
 
+
 typeset -U PATH path
-path=("$HOME/Library/Python/3.9/bin" "$GOPATH" "$GOBIN" "$HOME/bin" "$HOME/.poetry/bin" "$path[@]")
+path=(
+    "$(brew --prefix)/opt/openssl@3/bin"
+    "$(brew --prefix)/opt/libpq/bin"
+    "$HOME/Library/Python/3.9/bin"
+    "$GOPATH"
+    "$GOBIN"
+    "$HOME/bin"
+    "$HOME/.poetry/bin"
+    "$path[@]"
+)
 export PATH
 
 # enable zsh syntax highlighting
