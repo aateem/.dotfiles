@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
+  },
   ["nord-vim"] = {
     loaded = true,
     path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/nord-vim",
@@ -164,6 +169,11 @@ _G.packer_plugins = {
     path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/artem.roma/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -207,5 +217,6 @@ if should_profile then save_profiles() end
 end)
 
 if not no_errors then
+  error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
 end

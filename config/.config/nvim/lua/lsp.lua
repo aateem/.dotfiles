@@ -22,7 +22,7 @@ local on_attach = function()
     vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, { buffer = 0 })
     vim.keymap.set("n", "<leader>f", vim.lsp.buf.formatting, { buffer = 0 })
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = 0 })
-    vim.keymap.set("n", "<leader>d", vim.lsp.diagnostic.set_loclist, { buffer = 0 })
+    vim.keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { buffer = 0 })
 
     local format_on_write = vim.api.nvim_create_augroup("formatOnBufWrite", { clear = true })
     vim.api.nvim_create_autocmd("BufWritePost", {
@@ -47,7 +47,7 @@ nvim_lsp.efm.setup {
         rootMarkers = { ".git/" },
         languages = {
             python = {
-                { formatCommand = 'black --quiet -', formatStdin = true }
+                { formatCommand = 'black -', formatStdin = true }
             },
         },
     },
