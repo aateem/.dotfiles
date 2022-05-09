@@ -7,7 +7,8 @@ require('lsp')
 
 -- create a function to cycle through selected colorschemes
 -- vim.cmd('colorscheme onedark')
-vim.cmd('colorscheme nightfox')
+vim.o.termguicolors = true
+vim.cmd('colorscheme terafox')
 
 -- loading extensions for telescope
 require('telescope').load_extension('fzf')

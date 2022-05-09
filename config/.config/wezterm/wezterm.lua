@@ -1,10 +1,12 @@
 local wezterm = require("wezterm")
 
 return {
+    default_cwd = os.getenv("HOME"),
     color_scheme = "nord",
     font = wezterm.font("Iosevka Nerd Font Mono", { weight = "Regular" }),
     font_size = 16.0,
     audible_bell = "Disabled",
+    use_dead_keys = false,
     keys = {
         -- override tab motion (similar to Iterm2 defaults)
         { key = "LeftArrow", mods = "SUPER", action = wezterm.action { ActivateTabRelative = -1 } },

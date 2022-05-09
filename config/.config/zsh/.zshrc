@@ -8,8 +8,8 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true  # may potentially be slow (depending on the repo size)
 zstyle ':vcs_info:git:*' formats '%c %u %F{8}%b%f'
-zstyle ':vcs_info:git:*' stagedstr $'%F{116}\U2B24%f'
-zstyle ':vcs_info:git:*' unstagedstr $'%F{166}\U2B24%f'
+zstyle ':vcs_info:git:*' stagedstr $'%F{116}\Ue0a0%f'
+zstyle ':vcs_info:git:*' unstagedstr $'%F{166}\Ue0a0%f'
 zstyle ':vcs_info:git:*' actionformats '%c%u%F{207}%a%f%F{8}%b%f'
 
 # The following lines were added by compinstall

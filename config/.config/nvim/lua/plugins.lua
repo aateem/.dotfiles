@@ -31,6 +31,7 @@ function(use)
     use 'arcticicestudio/nord-vim'
     use 'chriskempson/base16-vim'
     use 'EdenEast/nightfox.nvim'
+    use 'folke/tokyonight.nvim'
 
     -- navigation
     use {

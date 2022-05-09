@@ -1,13 +1,13 @@
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-local cmp = require'cmp'
-local lspkind = require'lspkind'
+local cmp = require 'cmp'
+local lspkind = require 'lspkind'
 
 cmp.setup({
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'path' },
-        { name = 'buffer', keyword_length = 5 },
+        { name = 'buffer' },
     }),
     -- mapping = {
     --     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
@@ -47,14 +47,14 @@ cmp.setup({
     snippet = {
           -- REQUIRED - you must specify a snippet engine
           expand = function(args)
-            require('luasnip').lsp_expand(args.body)
+              require('luasnip').lsp_expand(args.body)
           end,
-        },
+    },
 
     formatting = {
-      format = lspkind.cmp_format({with_text = true, menu = ({
+      format = lspkind.cmp_format({ with_text = true, menu = ({
           buffer = "[Buffer]",
           nvim_lsp = "[LSP]",
-        })}),
+                                    }) }),
     },
 })
