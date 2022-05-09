@@ -24,4 +24,16 @@ vim.keymap.set("n", "<leader>-", "<cmd>vertical resize -5<cr>")
 -- plugin specific
 -- TODO should be moved in to separate lua module for that
 -- plugin's settings
+
+-- NERDTree
 vim.keymap.set("n", "<C-n>", "<cmd>NERDTreeToggle<cr>")
+
+-- Telescope
+vim.keymap.set('n', "<leader>p", function ()
+    require 'telescope.builtin'.find_files{ find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }
+end
+)
+vim.keymap.set("n", "gr", require 'telescope.builtin'.lsp_references)
+vim.keymap.set("n", "gs", require 'telescope.builtin'.lsp_document_symbols)
+vim.keymap.set("n", "fb", require 'telescope.builtin'.buffers)
+vim.keymap.set("n", "fg", require 'telescope.builtin'.live_grep)

@@ -20,3 +20,9 @@ require 'nvim-treesitter.configs'.setup {
         enable = true,
     },
 }
+
+require 'lualine'.setup {
+    options = {
+        icons_enabled = false
+    }
+}

@@ -72,7 +72,8 @@ function(use)
     use "Vimjas/vim-python-pep8-indent"
 
     -- UI enchancements
-    use "vim-airline/vim-airline"
+    -- use "vim-airline/vim-airline" -- try the lualine as packer can't update airline
+    use 'nvim-lualine/lualine.nvim'
 
     -- sugar over vim functionality
     use "Valloric/ListToggle"
