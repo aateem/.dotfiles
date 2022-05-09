@@ -1,13 +1,12 @@
 require('autocmds')
-require('plugins')
+require('packages')
 require('completion')
 require('options')
-require('mappings')
+require('keymaps')
 require('lsp')
 
 -- create a function to cycle through selected colorschemes
 -- vim.cmd('colorscheme onedark')
-vim.o.termguicolors = true
 vim.cmd('colorscheme terafox')
 
 -- loading extensions for telescope
