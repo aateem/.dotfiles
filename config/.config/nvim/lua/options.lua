@@ -31,3 +31,10 @@ vim.o.wildmenu = true
 vim.o.undolevels = 2048
 vim.o.background = "dark"
 vim.o.mouse = "a" -- enable mouse support
+
+-- always reserve a column for signs
+vim.wo.signcolumn = "yes"
+
+-- main purpose - write swap file more frequently,
+-- but also infuences behavior of some plugins
+vim.o.updatetime = 100
