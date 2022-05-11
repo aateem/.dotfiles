@@ -23,7 +23,8 @@ _comp_options+=(globdots)
 # End of lines added by compinstall
 
 #aliases
-alias ll='ls -GFlah'
+# alias ll='ls -GFlah'
+alias ll='exa -laag --group-directories-first'
 alias myip='curl ifconfig.co/ip'
 
 setopt PROMPT_SUBST

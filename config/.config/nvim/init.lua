@@ -22,6 +22,7 @@ require 'nvim-treesitter.configs'.setup {
 
 require 'lualine'.setup {
     options = {
-        icons_enabled = false
+        icons_enabled = false,
+        theme = 'solarized_light'
     }
 }
