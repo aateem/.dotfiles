@@ -34,8 +34,9 @@ setopt append_history share_history histignorealldups
 
 precmd () { vcs_info }
 
-PS1=$'%F{105}[%f%F{12}%2~%f%F{105}]%f %F{red}\U2771%f%F{yellow}\U2771%f%F{green}\U2771%f '
-RPS1='${vcs_info_msg_0_}'
+# PS1=$'%F{105}[%f%F{12}%2~%f%F{105}]%f %F{red}\U2771%f%F{yellow}\U2771%f%F{green}\U2771%f '
+PS1=$'%B%F{105}[%f%F{12}%~%f%F{105}]%f %F{red}\U2771%f%F{yellow}\U2771%f%F{green}\U2771%f%b '
+RPS1='%B${vcs_info_msg_0_}%b'
 
 
 function push_to_branch {
@@ -56,6 +57,7 @@ path=(
     "$(brew --prefix)/opt/openssl@3/bin"
     "$(brew --prefix)/opt/libpq/bin"
     "$HOME/Library/Python/3.9/bin"
+    "/Library/Frameworks/Python.framework/Versions/3.9/bin"
     "$GOPATH"
     "$GOBIN"
     "$HOME/bin"

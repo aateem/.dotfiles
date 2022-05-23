@@ -27,10 +27,11 @@ vim.keymap.set("n", "<leader>-", "<cmd>vertical resize -5<cr>")
 
 -- NERDTree
 vim.keymap.set("n", "<C-n>", "<cmd>NERDTreeToggle<cr>")
+-- vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 
 -- Telescope
-vim.keymap.set('n', "<leader>p", function ()
-    require 'telescope.builtin'.find_files{ find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }
+vim.keymap.set('n', "<leader>p", function()
+    require 'telescope.builtin'.find_files { find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }
 end
 )
 vim.keymap.set("n", "gr", require 'telescope.builtin'.lsp_references)

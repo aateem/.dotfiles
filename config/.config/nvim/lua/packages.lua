@@ -52,6 +52,11 @@ function(use)
     -- lsp stuff
     use "neovim/nvim-lspconfig"
 
+    use {
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    }
+
     -- completion stuff
     use "hrsh7th/nvim-cmp"
     use 'hrsh7th/cmp-nvim-lsp'
@@ -80,5 +85,9 @@ function(use)
 
     -- browsers
     use "preservim/nerdtree"
+    use 'kyazdani42/nvim-web-devicons'
+    -- use {
+    --     'kyazdani42/nvim-tree.lua',
+    -- }
 end
 )

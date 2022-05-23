@@ -39,20 +39,20 @@ nvim_lsp.pyright.setup {
 }
 
 -- TODO: figure out how to use company in house tools for linting/formatting
-nvim_lsp.efm.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    init_options = { documentFormatting = true, completion = false },
-    settings = {
-        rootMarkers = { ".git/" },
-        languages = {
-            python = {
-                { formatCommand = 'black -', formatStdin = true }
-            },
-        },
-    },
-    filetypes = { 'python' }
-}
+-- nvim_lsp.efm.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     init_options = { documentFormatting = true, completion = false },
+--     settings = {
+--         rootMarkers = { ".git/" },
+--         languages = {
+--             python = {
+--                 { formatCommand = 'black -', formatStdin = true }
+--             },
+--         },
+--     },
+--     filetypes = { 'python' }
+-- }
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
