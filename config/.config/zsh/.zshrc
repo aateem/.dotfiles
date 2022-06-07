@@ -26,6 +26,7 @@ _comp_options+=(globdots)
 # alias ll='ls -GFlah'
 alias ll='exa -laag --group-directories-first'
 alias myip='curl ifconfig.co/ip'
+alias v='nvim'
 
 setopt PROMPT_SUBST
 
@@ -58,6 +59,7 @@ path=(
     "$(brew --prefix)/opt/libpq/bin"
     "$HOME/Library/Python/3.9/bin"
     "/Library/Frameworks/Python.framework/Versions/3.9/bin"
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     "$GOPATH"
     "$GOBIN"
     "$HOME/bin"
