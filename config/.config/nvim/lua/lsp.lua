@@ -1,8 +1,19 @@
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-vim.lsp.diagnostic.on_publish_diagnostics, {
-    update_in_insert = true,
-}
-)
+-- In case I am in the mood of smth fancy
+-- vim.fn.sign_define('DiagnosticSignError', { text = "", texthl = "DiagnosticError" })
+-- vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticWarn" })
+-- vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticInfo" })
+-- vim.fn.sign_define("DiagnosticSignHint", { text = "ﯽ", texthl = "DiagnosticHint" })
+
+vim.diagnostic.config({
+    virtual_text=true,
+    update_in_insert=true,
+    severity_sort=true,
+    float = {
+        border = "rounded",
+        style = "minimal",
+        source = "always",
+    }
+})
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
@@ -23,6 +34,8 @@ local function lsp_keymaps(bufnr)
     vim.keymap.set("n", "<leader>f", vim.lsp.buf.formatting, { buffer = bufnr })
     vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { buffer = bufnr })
     vim.keymap.set("n", "<leader>d", vim.diagnostic.setloclist, { buffer = bufnr })
+    vim.keymap.set("n", "<leader>e", function () vim.diagnostic.goto_next({float=true}) end, {buffer = bufnr})
+    vim.keymap.set("n", "<leader>E", function () vim.diagnostic.goto_prev({float=true}) end, {buffer = bufnr})
 end
 
 local function on_attach(client, bufnr)
@@ -52,22 +65,6 @@ nvim_lsp.pyright.setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
-
--- TODO: figure out how to use company in house tools for linting/formatting
--- nvim_lsp.efm.setup {
---     on_attach = on_attach,
---     capabilities = capabilities,
---     init_options = { documentFormatting = true, completion = false },
---     settings = {
---         rootMarkers = { ".git/" },
---         languages = {
---             python = {
---                 { formatCommand = 'black -', formatStdin = true }
---             },
---         },
---     },
---     filetypes = { 'python' }
--- }
 
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
