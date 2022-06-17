@@ -10,3 +10,10 @@ vim.api.nvim_create_autocmd(
     { "BufLeave", "FocusLost" },
     { command = "set norelativenumber", group = number_toggle }
 )
+
+-- plugin realted
+local light_bulb_enable = vim.api.nvim_create_augroup("lightBulbEnable", { clear = true })
+vim.api.nvim_create_autocmd(
+    {'CursorHold', 'CursorHoldI'},
+    {callback = function () require'nvim-lightbulb'.update_lightbulb() end, group=light_bulb_enable}
+)
