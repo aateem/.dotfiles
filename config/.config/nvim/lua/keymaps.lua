@@ -31,10 +31,16 @@ vim.keymap.set("n", "<C-n>", "<cmd>NERDTreeToggle<cr>")
 
 -- Telescope
 vim.keymap.set('n', "<leader>p", function()
-    require 'telescope.builtin'.find_files { find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }
+    require 'telescope.builtin'.find_files {
+        find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" }
+    }
 end
 )
 vim.keymap.set("n", "gr", require 'telescope.builtin'.lsp_references)
 vim.keymap.set("n", "gs", require 'telescope.builtin'.lsp_document_symbols)
 vim.keymap.set("n", "fb", require 'telescope.builtin'.buffers)
 vim.keymap.set("n", "fg", require 'telescope.builtin'.live_grep)
+vim.keymap.set("n", "fv", function ()
+    require"telescope".extensions.file_browser.file_browser({path = "%:p:h", grouped = true, hidden = true})
+end
+)

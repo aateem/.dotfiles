@@ -11,9 +11,6 @@ require('lsp')
 -- vim.cmd('colorscheme duskfox')
 vim.cmd 'colorscheme tokyonight'
 
--- loading extensions for telescope
-require('telescope').load_extension('fzf')
-
 require 'nvim-treesitter.configs'.setup {
     ensure_installed = { 'python', 'lua' },
     sync_install = true,
@@ -35,4 +32,18 @@ require("null-ls").setup {
     }
 }
 
+require 'telescope'.setup {
+    pickers = {
+        find_files = {
+            theme = "ivy"
+        }
+    }
+}
+require('telescope').load_extension('fzf')
+require("telescope").load_extension "file_browser"
+
+require 'aerial'.setup {
+    min_width = 35,
+    max_width = 35,
+}
 -- require'nvim-tree'.setup {}

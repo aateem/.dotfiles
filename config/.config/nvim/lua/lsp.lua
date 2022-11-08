@@ -59,6 +59,7 @@ local function on_attach(client, bufnr)
         )
     end
     lsp_keymaps(bufnr)
+    require('aerial').on_attach(client, bufnr)
 end
 
 nvim_lsp.pyright.setup {

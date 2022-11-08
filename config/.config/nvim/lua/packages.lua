@@ -42,6 +42,7 @@ function(use)
             }
     }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
 
     use {
             'nvim-treesitter/nvim-treesitter',
@@ -58,6 +59,8 @@ function(use)
     }
 
     use 'kosayoda/nvim-lightbulb'
+
+     use 'stevearc/aerial.nvim'
 
     -- completion stuff
     use "hrsh7th/nvim-cmp"

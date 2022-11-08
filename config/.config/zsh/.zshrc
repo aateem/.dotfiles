@@ -60,6 +60,7 @@ path=(
     "$HOME/Library/Python/3.9/bin"
     "/Library/Frameworks/Python.framework/Versions/3.9/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    "/Applications/WezTerm.app/Contents/MacOS"
     "$GOPATH"
     "$GOBIN"
     "$HOME/bin"
