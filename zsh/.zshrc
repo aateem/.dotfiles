@@ -24,9 +24,6 @@ _comp_options+=(globdots)
 
 #aliases
 # alias ll='ls -GFlah'
-alias ll='exa -laag --group-directories-first'
-alias myip='curl ifconfig.co/ip'
-alias v='nvim'
 
 setopt PROMPT_SUBST
 
@@ -38,16 +35,6 @@ precmd () { vcs_info }
 # PS1=$'%F{105}[%f%F{12}%2~%f%F{105}]%f %F{red}\U2771%f%F{yellow}\U2771%f%F{green}\U2771%f '
 PS1=$'%B%F{105}[%f%F{12}%~%f%F{105}]%f %F{red}\U2771%f%F{yellow}\U2771%f%F{green}\U2771%f%b '
 RPS1='%B${vcs_info_msg_0_}%b'
-
-
-function push_to_branch {
-    curr_branch=$(git branch --show-current)
-    if [  ${curr_branch} = "master" ]; then
-        exit 1
-    else
-        git push origin ${curr_branch}
-    fi
-}
 
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"
@@ -71,3 +58,11 @@ export PATH
 # enable zsh syntax highlighting
 # run `brew install zsh-syntax-highlighting` first
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(starship init zsh)"
+
+export DOTFILESDIR="$HOME/.dotfiles"
+
+source $DOTFILESDIR/zsh/functions
+source $DOTFILESDIR/zsh/aliases
+

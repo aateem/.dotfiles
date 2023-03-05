@@ -1,0 +1,12 @@
+take () {
+	[[ ! -d $1 ]] && mkdir -p $1; cd $1
+}
+
+function push_to_branch {
+    curr_branch=$(git branch --show-current)
+    if [  ${curr_branch} = "master" ]; then
+        exit 1
+    else
+        git push origin ${curr_branch}
+    fi
+}

@@ -1,0 +1,16 @@
+theme = "nord"
+
+[editor]
+line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-e = ["move_line_down", "scroll_down"]
+C-y = ["move_line_up", "scroll_up"]

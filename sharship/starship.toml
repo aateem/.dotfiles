@@ -1,0 +1,51 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$docker\
+$docker_context\
+$python\
+$golang\
+$rust\
+$lua\
+$java\
+$kotlin\
+$terraform\
+$git_branch\
+$git_state\
+$git_status\
+$helm\
+$kubernetes\
+$terraform\
+$line_break\
+$character"""
+
+right_format = """
+$shlvl\
+$cmd_duration\
+$container\
+$jobs\
+$hostname\
+$status\
+$username\
+$battery\
+$time"""
+
+add_newline = true
+
+[[battery.display]]
+threshold = 15
+style = 'bold red'
+
+[kubernetes]
+disabled = false
+
+[status]
+disabled = false
+
+[time]
+disabled = false
+
+[shlvl]
+disabled = false
