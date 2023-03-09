@@ -7,7 +7,7 @@ end
 
 
 -- files/buffers
-vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+vim.keymap.set('n', '<leader>p', all_files, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) 
 vim.keymap.set('n', '<leader>gf', builtin.git_files, {}) 
 vim.keymap.set('n', '<leader>fm', builtin.marks, {}) 

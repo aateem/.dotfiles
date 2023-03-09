@@ -13,6 +13,7 @@ $java\
 $kotlin\
 $terraform\
 $git_branch\
+$git_metrics\
 $git_state\
 $git_status\
 $helm\
@@ -37,6 +38,9 @@ add_newline = true
 [[battery.display]]
 threshold = 15
 style = 'bold red'
+
+[git_metrics]
+disabled = false
 
 [kubernetes]
 disabled = false
