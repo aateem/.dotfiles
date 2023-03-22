@@ -27,6 +27,7 @@ path=(
     "$GOPATH"
     "$GOBIN"
     "$HOME/bin"
+    $HOME/.local/bin
     "$path[@]"
 )
 export PATH
@@ -40,8 +41,8 @@ eval "$(starship init zsh)"
 export DOTFILESDIR="$HOME/.dotfiles"
 source $ZDOTDIR/custom_functions
 
-FZF_COMP=$HOME/.fzf.zsh 
-[[ -f $FZF_COMP ]] && source $FZF_COMP 
+FZF_COMP=$HOME/.fzf.zsh
+[[ -f $FZF_COMP ]] && source $FZF_COMP
 
 # CTRL-/ to toggle small preview window to see the full command
 # CTRL-Y to copy the command into clipboard using pbcopy
