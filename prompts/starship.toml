@@ -16,6 +16,7 @@ $git_branch\
 $git_metrics\
 $git_state\
 $git_status\
+$git_commit\
 $helm\
 $kubernetes\
 $terraform\
@@ -39,13 +40,39 @@ add_newline = true
 threshold = 15
 style = 'bold red'
 
+[character]
+success_symbol = '[](bold green) '
+error_symbol = '[](bold red) '
+
+[jobs]
+symbol = " "
+
+[status]
+style = 'bg:black'
+symbol = '🔴 '
+format = '[\[$symbol$common_meaning$signal_name$maybe_int\]]($style) '
+map_symbol = true
+disabled = false
+
 [git_metrics]
 disabled = false
 
-[kubernetes]
-disabled = false
+[git_commit]
+tag_disabled = false
 
-[status]
+[git_status]
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+untracked = '[](white)'
+modified = '[](yellow)'
+staged = '[](green)'
+renamed = '[](purple)'
+deleted = '[](red)'
+format = '$untracked$modified$staged$renamed$deleted'
+
+[kubernetes]
 disabled = false
 
 [time]

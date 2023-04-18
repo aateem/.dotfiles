@@ -6,9 +6,19 @@ local cached_fonts = {
     source_code_pro = wezterm.font("SauceCodePro Nerd Font", { weight = "Regular" }),
 }
 
+local cached_colors = {
+    n = "nord",
+    trf = "terafox",
+    hlk = "The Hulk",
+    tkyo_m = "tokyonight_moon",
+    tmrw_bl = "Tomorrow Night Blue",
+    tmrw_brn = "Tomorrow Night Burns",
+    tch = "ToyChest",
+}
+
 return {
     default_cwd = os.getenv("HOME"),
-    color_scheme = "terafox",
+    color_scheme = cached_colors.trf,
     font = cached_fonts.iosevka_term,
     font_size = 16.0,
     audible_bell = "Disabled",
