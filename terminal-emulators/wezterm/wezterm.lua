@@ -1,9 +1,15 @@
 local wezterm = require("wezterm")
 
+local cached_fonts = {
+    iosevka_term = wezterm.font("IosevkaTerm Nerd Font", { weight = "Regular" }),
+    iosevka = wezterm.font("Iosevka Nerd Font", { weight = "Regular" }),
+    source_code_pro = wezterm.font("SauceCodePro Nerd Font", { weight = "Regular" }),
+}
+
 return {
     default_cwd = os.getenv("HOME"),
-    color_scheme = "nord",
-    font = wezterm.font("IosevkaTerm Nerd Font Mono", { weight = "Regular" }),
+    color_scheme = "terafox",
+    font = cached_fonts.iosevka_term,
     font_size = 16.0,
     audible_bell = "Disabled",
     use_dead_keys = false,

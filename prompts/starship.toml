@@ -20,6 +20,7 @@ $helm\
 $kubernetes\
 $terraform\
 $line_break\
+$time\
 $character"""
 
 right_format = """
@@ -30,8 +31,7 @@ $jobs\
 $hostname\
 $status\
 $username\
-$battery\
-$time"""
+$battery"""
 
 add_newline = true
 
