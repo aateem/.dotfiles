@@ -21,7 +21,9 @@ export GOBIN="$HOME/go/bin"
 
 typeset -U PATH path
 path=(
+    "/usr/local/bin/"
     "$(brew --prefix)/opt/openssl@3/bin"
+    "/Applications/WezTerm.app/Contents/MacOS"
     "$(brew --prefix)/opt/libpq/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     "$GOPATH"
@@ -36,7 +38,12 @@ export PATH
 # run `brew install zsh-syntax-highlighting` first
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# enable the prompt configuration
 eval "$(starship init zsh)"
+
+# enable pyenv
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 export DOTFILESDIR="$HOME/.dotfiles"
 source $ZDOTDIR/custom_functions

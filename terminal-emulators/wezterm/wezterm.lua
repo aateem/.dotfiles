@@ -17,8 +17,8 @@ local cached_colors = {
 }
 
 return {
-    default_cwd = os.getenv("HOME"),
     color_scheme = cached_colors.trf,
+    default_cwd = os.getenv("HOME"),
     font = cached_fonts.iosevka_term,
     font_size = 16.0,
     audible_bell = "Disabled",

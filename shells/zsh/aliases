@@ -1,3 +1,7 @@
 alias ll='exa -laag --group-directories-first'
 alias myip='curl ifconfig.co/ip'
 alias v='nvim'
+
+alias k=kubectl
+alias kctx=kubecontext
+alias kns=kubenamespace
