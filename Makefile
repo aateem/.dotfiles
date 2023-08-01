@@ -7,7 +7,8 @@ base: brew
 	brew install \
 		git \
 		stow \
-		fish
+		fish \
+		ripgrep
 	mkdir $config_dir
 
 tools:
