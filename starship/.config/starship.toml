@@ -35,6 +35,9 @@ $battery"""
 
 add_newline = true
 
+[character] 
+success_symbol = '[➜](bold blue)'
+
 [[battery.display]]
 threshold = 15
 style = 'bold red'
