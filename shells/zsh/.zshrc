@@ -14,7 +14,10 @@ compinit
 _comp_options+=(globdots)
 # End of lines added by compinstall
 
-setopt INC_APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_ALL_DUPS
+# configure the history behavior
+setopt INC_APPEND_HISTORY  # do not wait for the shell to exit to append to the history
+setopt SHARE_HISTORY       # in combination with the above allows accessing the history inside child sessions
+setopt HIST_IGNORE_ALL_DUPS  
 
 export GOPATH="$HOME/go"
 export GOBIN="$HOME/go/bin"

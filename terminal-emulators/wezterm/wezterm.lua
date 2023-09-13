@@ -23,10 +23,9 @@ local cached_colors = {
 }
 local colorize = cached_colors.tokyo_m
 
-config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
-
-config.font_size = 16.0
-config.font = fonts.jetbrains
+config.font_size = 18.0
+-- config.font = fonts.jetbrains
+config.font = fonts.iosevka_term
 
 config.color_scheme = colorize
 config.default_cwd = os.getenv("HOME")

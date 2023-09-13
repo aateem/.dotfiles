@@ -3,12 +3,17 @@ config_dir = $HOME/.config
 brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-base: brew
+base: 
 	brew install \
 		git \
 		stow \
 		fish \
 		ripgrep
+
+python: 
+	brew install pipx && pipx ensurepath
+
+config: 
 	mkdir $config_dir
 
 tools:
