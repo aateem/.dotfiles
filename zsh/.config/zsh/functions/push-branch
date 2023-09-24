@@ -1,0 +1,6 @@
+# "push-branch" - push to remote, bare the master/main, to stage for the PR creation
+# TODO: duplicates the gh CLI, should use less
+curr_branch=$(git branch --show-current)
+protected=(main master)
+if (( ! $protected[(Ie)$curr_branch] )); then git push origin ${curr_branch}; fi
+

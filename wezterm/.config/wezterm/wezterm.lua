@@ -4,7 +4,7 @@ if wezterm.config_builder then
 end
 
 local fonts = {
-    iosevka_term = wezterm.font("IosevkaTerm Nerd Font", { weight = "Regular" }),
+    iosevka_term = wezterm.font("IosevkaTerm Nerd Font", { weight = "Medium" }),
     iosevka = wezterm.font("Iosevka Nerd Font", { weight = "Regular" }),
     source_code_pro = wezterm.font("SauceCodePro Nerd Font", { weight = "Regular" }),
     jetbrains = wezterm.font "JetBrainsMono Nerd Font", 
@@ -20,13 +20,13 @@ local cached_colors = {
     tmrw_brn = "Tomorrow Night Burns",
     tch = "ToyChest",
     at = "AdventureTime",
+    dracula = "Dracula (Official)"
 }
 local colorize = cached_colors.tokyo_m
 
-config.default_prog = { '/opt/homebrew/bin/fish', '-l' }
-
-config.font_size = 16.0
-config.font = fonts.jetbrains
+config.font_size = 20.0
+-- config.font = fonts.jetbrains
+config.font = fonts.iosevka_term
 
 config.color_scheme = colorize
 config.default_cwd = os.getenv("HOME")

@@ -1,0 +1,2 @@
+# "take" - create and move inside a directory
+[[ ! -d $1 ]] && mkdir -p $1; cd $1
