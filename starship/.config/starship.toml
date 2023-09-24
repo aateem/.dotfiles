@@ -37,6 +37,7 @@ add_newline = true
 
 [character] 
 success_symbol = '[➜](bold blue)'
+error_symbol = '[➜](bold red)'
 
 [[battery.display]]
 threshold = 15

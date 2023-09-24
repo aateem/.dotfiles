@@ -5,3 +5,7 @@ alias v='nvim'
 alias k=kubectl
 alias kctx=kubecontext
 alias kns=kubenamespace
+
+alias gst='git status'
+
+alias c=clear
