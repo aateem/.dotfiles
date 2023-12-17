@@ -39,6 +39,7 @@ precmd () { source $user_conf_dir/aliases }  # make new aliased available right 
 typeset -U PATH path
 path=(
      /Applications/WezTerm.app/Contents/MacOS
+     $HOME/go/bin
      $path
 )
 

@@ -1,0 +1,19 @@
+theme = "onedark"
+
+[editor]
+cursorline = true
+line-number = "relative"
+color-modes = true
+
+[editor.statusline]
+right =  ["diagnostics", "selections", "register", "file-encoding", "position-percentage", "position"] 
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+
+[editor.indent-guides]
+render = true
+
+[editor.file-picker]
+hidden = false
