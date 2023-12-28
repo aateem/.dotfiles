@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "tokyonight_storm"
 
 [editor]
 cursorline = true
@@ -7,6 +7,9 @@ color-modes = true
 
 [editor.statusline]
 right =  ["diagnostics", "selections", "register", "file-encoding", "position-percentage", "position"] 
+
+[editor.whitespace]
+render = "all"
 
 [editor.cursor-shape]
 normal = "block"

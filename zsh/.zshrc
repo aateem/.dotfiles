@@ -27,6 +27,8 @@ user_conf_dir=$HOME/.config/zsh
 func_dir=$user_conf_dir/functions  # add your <function-name> here and they will be auto-loaded
 fpath+=($func_dir)
 
+EDITOR=hx
+
 #################### Config actions
 for _func in $func_dir/*; autoload ${_func:t}  # load custom functions
 
@@ -40,6 +42,7 @@ typeset -U PATH path
 path=(
      /Applications/WezTerm.app/Contents/MacOS
      $HOME/go/bin
+     $HOME/.local/bin
      $path
 )
 
