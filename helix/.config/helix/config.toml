@@ -1,4 +1,4 @@
-theme = "tokyonight_storm"
+theme = "dracula"
 
 [editor]
 cursorline = true
@@ -7,6 +7,9 @@ color-modes = true
 
 [editor.statusline]
 right =  ["diagnostics", "selections", "register", "file-encoding", "position-percentage", "position"] 
+
+[editor.soft-wrap]
+enable = true
 
 [editor.whitespace]
 render = "all"
@@ -20,3 +23,12 @@ render = true
 
 [editor.file-picker]
 hidden = false
+
+[keys.normal]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal."+"]
+f = ":pipe jq"
+l = ":pipe jq '.[] | length'"
+j = ":pipe jq 'fromjson'"

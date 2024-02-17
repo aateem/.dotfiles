@@ -10,9 +10,18 @@ command = "lua-language-server"
 
 [[language]]
 name = "python"
+auto-format = true
 language-servers = ["pyright", "ruff"]
+roots = ["pyproject.toml", ".git"]
 
 [[language]]
 name = "lua"
+auto-format = true
 formatter = { command = "stylua", args = ["-"] }
 language-servers = ["lua"]
+
+
+[[language]]
+name = "go"
+auto-format = true
+roots = ["go.mod", ".git"]

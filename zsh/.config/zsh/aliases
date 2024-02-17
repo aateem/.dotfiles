@@ -1,4 +1,4 @@
-alias ll='exa -laag --group-directories-first'
+alias ll='eza -laag --group-directories-first'
 alias myip='curl ifconfig.co/ip'
 alias v='nvim'
 
@@ -7,5 +7,7 @@ alias kctx=kubecontext
 alias kns=kubenamespace
 
 alias gst='git status'
+alias gch='git checkout'
+alias gt='cd $(git rev-parse --show-toplevel)'
 
 alias c=clear

@@ -1,0 +1,9 @@
+set hidden
+set drawbox
+set info size
+set dircounts
+
+cmd config-open ${{
+    $EDITOR ~/.config/lf/lfrc
+    lf -remote "send $id source ~/.config/lf/lfrc"
+}}

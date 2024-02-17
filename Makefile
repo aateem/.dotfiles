@@ -4,7 +4,7 @@ brew:
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 base: 
-	brew install git stow ripgrep exa starship zsh-syntax-highlighting && \
+	brew install git stow ripgrep eza starship zsh-syntax-highlighting && \
 	brew tap homebrew/cask-fonts && \
 	brew install --cask font-jetbrains-mono-nerd-font 
 

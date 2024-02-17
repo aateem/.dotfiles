@@ -32,7 +32,7 @@ EDITOR=hx
 #################### Config actions
 for _func in $func_dir/*; autoload ${_func:t}  # load custom functions
 
-precmd () { source $user_conf_dir/aliases }  # make new aliased available right away
+precmd () { source $user_conf_dir/aliases && source $HOME/.local/shell-aliases }  # make new aliased available right away
 
 [[ -a $(which brew) ]] && eval "$(brew shellenv)"
 [[ -a $(which starship) ]] && eval "$(starship init zsh)"
@@ -45,6 +45,16 @@ path=(
      $HOME/.local/bin
      $path
 )
+
+# fzf config
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # as per the instructions - must run after everything else
 hg=$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
